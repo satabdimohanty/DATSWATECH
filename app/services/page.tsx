@@ -105,7 +105,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      id: "app",
+      id: "app1",
       badge: "Mobile",
       title: "App Development",
       description:
