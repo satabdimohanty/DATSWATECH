@@ -126,3 +126,23 @@
 .backdrop-blur-custom {
   backdrop-filter: blur(8.25px);
 }
+/* Animate gradient from bottom to top */
+.hover-gradient-animate {
+  background: linear-gradient(to top, #374151, #000000); /* gray-700 to black */
+  background-size: 100% 200%;
+  background-position: 0% 100%;
+  transition: all 0.5s ease;
+}
+
+.hover-gradient-animate:hover {
+  animation: gradient-up 1s forwards;
+}
+
+@keyframes gradient-up {
+  0% {
+    background-position: 0% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}

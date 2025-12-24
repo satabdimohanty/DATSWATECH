@@ -21,6 +21,48 @@ function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
 export default function ServicesPage() {
   const services = [
     {
+      id: "mobile",
+      badge: "Mobility",
+      title: "Mobile App Development",
+      description:
+        "Design and build high-performance mobile applications that deliver seamless user experiences. From concept to launch, we create secure, scalable, and user-centric apps for iOS and Android.",
+      features: [
+        "iOS & Android App Development",
+        "Cross-Platform Apps (React Native / Flutter)",
+        "UI/UX Design for Mobile",
+        "API & Backend Integration",
+        "App Performance Optimization",
+        "App Store Deployment & Support",
+      ],
+      image: "/mobile-app-development-ui-ux.jpg",
+      stats: [
+        { value: "2x", label: "Faster Development" },
+        { value: "99.9%", label: "App Stability" },
+        { value: "5★", label: "User Ratings" },
+      ],
+    },
+    {
+      id: "web",
+      badge: "Development",
+      title: "Web Development",
+      description:
+        "Create stunning, high-performance web applications that engage users and drive results. We specialize in modern frameworks and technologies to build scalable, secure, and beautiful digital experiences.",
+      features: [
+        "Custom Web Applications",
+        "E-commerce Platforms",
+        "Progressive Web Apps",
+        "API Development",
+        "CMS Solutions",
+        "Performance Optimization",
+      ],
+      image: "/modern-web-development-code-interface.jpg",
+      stats: [
+        { value: "Sub-2s", label: "Load Time" },
+        { value: "100%", label: "Responsive" },
+        { value: "SEO", label: "Optimized" },
+      ],
+    },
+    {
       id: "data",
       badge: "Core Service",
       title: "Data Solutions & Analytics",
@@ -62,67 +104,26 @@ export default function ServicesPage() {
         { value: "30%", label: "Cost Savings" },
       ],
     },
+
     {
-      id: "ai",
-      badge: "Innovation",
-      title: "AI Automation & Intelligence",
+      id: "cloud",
+      badge: "Cloud",
+      title: "Cloud Solutions",
       description:
-        "Harness the power of artificial intelligence to automate processes and gain competitive advantage. From intelligent chatbots to predictive models, we build AI solutions that transform your business.",
+        "Design, deploy, and manage secure cloud infrastructures that scale with your business. We help organizations migrate, optimize, and innovate on the cloud to improve performance, reliability, and cost efficiency.",
       features: [
-        "Intelligent Chatbots",
-        "Process Automation (RPA)",
-        "Machine Learning Models",
-        "Natural Language Processing",
-        "Computer Vision Solutions",
-        "Predictive Maintenance",
+        "Cloud Architecture Design",
+        "Cloud Migration & Modernization",
+        "AWS, Azure & Google Cloud",
+        "DevOps & CI/CD Pipelines",
+        "Cloud Security & Compliance",
+        "Monitoring & Cost Optimization",
       ],
-      image: "/ai-automation-neural-network-visualization.jpg",
+      image: "/cloud-solutions-infrastructure.jpg",
       stats: [
-        { value: "80%", label: "Task Automation" },
-        { value: "24/7", label: "Availability" },
-        { value: "95%", label: "Accuracy Rate" },
-      ],
-    },
-    {
-      id: "web",
-      badge: "Development",
-      title: "Web Development",
-      description:
-        "Create stunning, high-performance web applications that engage users and drive results. We specialize in modern frameworks and technologies to build scalable, secure, and beautiful digital experiences.",
-      features: [
-        "Custom Web Applications",
-        "E-commerce Platforms",
-        "Progressive Web Apps",
-        "API Development",
-        "CMS Solutions",
-        "Performance Optimization",
-      ],
-      image: "/modern-web-development-code-interface.jpg",
-      stats: [
-        { value: "Sub-2s", label: "Load Time" },
-        { value: "100%", label: "Responsive" },
-        { value: "SEO", label: "Optimized" },
-      ],
-    },
-    {
-      id: "app1",
-      badge: "Mobile",
-      title: "App Development",
-      description:
-        "Build native and cross-platform mobile applications that users love. We create intuitive, feature-rich apps for iOS and Android that extend your business reach and enhance customer engagement.",
-      features: [
-        "iOS Native Development",
-        "Android Native Development",
-        "Cross-platform (React Native)",
-        "UI/UX Design",
-        "App Store Optimization",
-        "Maintenance & Updates",
-      ],
-      image: "/mobile-app-development-devices-showcase.jpg",
-      stats: [
-        { value: "4.8+", label: "App Rating" },
-        { value: "1M+", label: "Downloads" },
-        { value: "60%", label: "User Retention" },
+        { value: "99.9%", label: "Uptime" },
+        { value: "40%", label: "Cost Reduction" },
+        { value: "3x", label: "Scalability" },
       ],
     },
     {
@@ -144,6 +145,27 @@ export default function ServicesPage() {
         { value: "360°", label: "Assessment" },
         { value: "5yr", label: "Roadmap" },
         { value: "ROI", label: "Focused" },
+      ],
+    },
+    {
+      id: "ai-solutions",
+      badge: "AI",
+      title: "AI & GenAI Solutions",
+      description:
+        "Empower your business with AI-driven strategies and tools. We help you identify high-impact AI use-cases, implement generative AI models, and integrate intelligent automation for measurable outcomes.",
+      features: [
+        "AI Readiness Assessment",
+        "Generative AI Model Selection",
+        "Agentic AI Workflow Design",
+        "Intelligent Process Automation",
+        "Predictive Analytics & Insights",
+        "AI Integration & Deployment",
+      ],
+      image: "/ai-solutions-implementation.jpg",
+      stats: [
+        { value: "50+", label: "AI Use-Cases Delivered" },
+        { value: "100%", label: "ROI-Focused" },
+        { value: "Enterprise", label: "Scale-Ready" },
       ],
     },
   ];
