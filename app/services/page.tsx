@@ -1,19 +1,17 @@
 "use client";
 
 import type React from "react";
-
 import Link from "next/link";
+import { Plus, Circle, Hexagon, Check } from "lucide-react";
+import Navbar from "@/components/nav-bar";
 import FooterSection from "@/components/footer-section";
-
+import Timeline from "./timeline";
+import TechStack from "./techla";
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
-    <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
-      <div className="w-[14px] h-[14px] relative overflow-hidden flex items-center justify-center">
-        {icon}
-      </div>
-      <div className="text-center flex justify-center flex-col text-[#37322F] text-xs font-medium leading-3 font-sans">
-        {text}
-      </div>
+    <div className="px-3 py-1 bg-white rounded-full flex items-center gap-2 border border-[#E0E0E0] shadow-sm">
+      <div className="w-4 h-4 flex items-center justify-center">{icon}</div>
+      <div className="text-[#37322F] text-xs font-semibold">{text}</div>
     </div>
   );
 }
@@ -34,7 +32,7 @@ export default function ServicesPage() {
         "App Performance Optimization",
         "App Store Deployment & Support",
       ],
-      image: "/mobile-app-development-ui-ux.jpg",
+      image: "images/mobile/4.jpg",
       stats: [
         { value: "2x", label: "Faster Development" },
         { value: "99.9%", label: "App Stability" },
@@ -55,7 +53,7 @@ export default function ServicesPage() {
         "CMS Solutions",
         "Performance Optimization",
       ],
-      image: "/modern-web-development-code-interface.jpg",
+      image: "/images/web/2.avif",
       stats: [
         { value: "Sub-2s", label: "Load Time" },
         { value: "100%", label: "Responsive" },
@@ -76,7 +74,7 @@ export default function ServicesPage() {
         "Data Lake Implementation",
         "Predictive Analytics",
       ],
-      image: "/data-analytics-infrastructure-visualization.jpg",
+      image: "/images/erp4.avif",
       stats: [
         { value: "10x", label: "Faster Insights" },
         { value: "99.9%", label: "Data Accuracy" },
@@ -97,7 +95,7 @@ export default function ServicesPage() {
         "Third-party Integration",
         "Training & Support",
       ],
-      image: "/erp-system-modules-integration-enterprise.jpg",
+      image: "/images/erp.avif",
       stats: [
         { value: "40%", label: "Efficiency Gain" },
         { value: "50%", label: "Process Automation" },
@@ -119,7 +117,7 @@ export default function ServicesPage() {
         "Cloud Security & Compliance",
         "Monitoring & Cost Optimization",
       ],
-      image: "/cloud-solutions-infrastructure.jpg",
+      image: "/images/cloud/cloud.avif",
       stats: [
         { value: "99.9%", label: "Uptime" },
         { value: "40%", label: "Cost Reduction" },
@@ -140,7 +138,7 @@ export default function ServicesPage() {
         "Vendor Selection",
         "IT Roadmap Planning",
       ],
-      image: "/it-consulting-strategy-planning-session.jpg",
+      image: "/images/consultancy/business.avif",
       stats: [
         { value: "360°", label: "Assessment" },
         { value: "5yr", label: "Roadmap" },
@@ -161,7 +159,7 @@ export default function ServicesPage() {
         "Predictive Analytics & Insights",
         "AI Integration & Deployment",
       ],
-      image: "/ai-solutions-implementation.jpg",
+      image: "/images/ai/2.avif",
       stats: [
         { value: "50+", label: "AI Use-Cases Delivered" },
         { value: "100%", label: "ROI-Focused" },
@@ -170,259 +168,213 @@ export default function ServicesPage() {
     },
   ];
 
+  const process = [
+    { step: "01", title: "Discovery", description: "Understand client needs." },
+    {
+      step: "02",
+      title: "Strategy",
+      description: "Define roadmap & architecture.",
+    },
+    { step: "03", title: "Development", description: "Agile implementation." },
+    { step: "04", title: "Deployment", description: "Launch and support." },
+  ];
+
   return (
-    <div className="w-full min-h-screen relative bg-[#F7F5F3] overflow-x-hidden flex flex-col justify-start items-center">
-      <div className="relative flex flex-col justify-start items-center w-full">
-        <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] relative flex flex-col justify-start items-start">
-          {/* Vertical lines */}
-          <div className="w-[1px] h-full absolute left-4 sm:left-6 md:left-8 lg:left-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
-          <div className="w-[1px] h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
+    <div className="w-full min-h-screen bg-white flex flex-col items-center overflow-x-hidden text-[#37322F]">
+      <Navbar />
+      {/* Ultra-Advanced Hero Section */}
+      <section className="w-full bg-white relative overflow-hidden py-32 px-4 sm:px-6 md:px-8 flex justify-center">
+        {/* Background Gradients */}
+        <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-[700px] h-[700px] bg-gradient-to-r from-gray-200/30 to-gray-100/20 rounded-full blur-3xl pointer-events-none"></div>
+        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-gradient-to-tr from-yellow-300/20 to-orange-300/10 rounded-full blur-3xl pointer-events-none animate-blob"></div>
+        <div className="absolute -top-20 -right-40 w-[400px] h-[400px] bg-gradient-to-bl from-yellow-300/15 to-orange-300/5 rounded-full blur-3xl pointer-events-none animate-blob animation-delay-2000"></div>
 
-          {/* Navigation */}
-          <div className="w-full h-12 sm:h-14 md:h-16 lg:h-[84px] flex justify-center items-center z-20 px-6 sm:px-8 md:px-12 lg:px-0 relative">
-            <div className="w-full h-0 absolute left-0 top-6 sm:top-7 md:top-8 lg:top-[42px] border-t border-[rgba(55,50,47,0.12)] shadow-[0px_1px_0px_white]"></div>
+        <div className="w-full max-w-6xl flex flex-col lg:flex-row gap-12 relative z-10">
+          {/* Left Side - Text & Badges */}
+          <div className="flex-1 flex flex-col gap-6 z-10">
+            {/* Badge */}
+            <Badge
+              icon={<Plus className="w-4 h-4 stroke-[#37322F]" />}
+              text="Our Services"
+            />
 
-            <div className="w-full max-w-[calc(100%-32px)] sm:max-w-[calc(100%-48px)] md:max-w-[calc(100%-64px)] lg:max-w-[780px] lg:w-[780px] h-10 sm:h-11 md:h-12 py-1.5 sm:py-2 px-3 sm:px-4 md:px-4 pr-2 sm:pr-3 bg-[#F7F5F3] backdrop-blur-sm shadow-[0px_0px_0px_2px_white] overflow-hidden rounded-[50px] flex justify-between items-center relative z-30">
-              <div className="flex justify-center items-center">
-                <Link href="/" className="flex justify-start items-center">
-                  <div className="flex flex-col justify-center text-[#2F3037] text-sm sm:text-base md:text-lg lg:text-xl font-medium leading-5 font-sans">
-                    DATSWATECH
-                  </div>
-                </Link>
-                <div className="pl-3 sm:pl-4 md:pl-5 lg:pl-5 hidden sm:flex flex-row gap-2 sm:gap-3 md:gap-4 lg:gap-4">
-                  <Link
-                    href="/services"
-                    className="flex justify-start items-center"
-                  >
-                    <div className="flex flex-col justify-center text-[#37322F] text-xs md:text-[13px] font-semibold leading-[14px] font-sans">
-                      Services
-                    </div>
-                  </Link>
-                  <Link
-                    href="/about"
-                    className="flex justify-start items-center"
-                  >
-                    <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans hover:text-[#37322F] transition-colors">
-                      About
-                    </div>
-                  </Link>
-                  <Link
-                    href="/portfolio"
-                    className="flex justify-start items-center"
-                  >
-                    <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans hover:text-[#37322F] transition-colors">
-                      Portfolio
-                    </div>
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className="flex justify-start items-center"
-                  >
-                    <div className="flex flex-col justify-center text-[rgba(49,45,43,0.80)] text-xs md:text-[13px] font-medium leading-[14px] font-sans hover:text-[#37322F] transition-colors">
-                      Contact
-                    </div>
-                  </Link>
-                </div>
-              </div>
-              <div className="h-6 sm:h-7 md:h-8 flex justify-start items-start gap-2 sm:gap-3">
-                <Link
-                  href="/contact"
-                  className="px-2 sm:px-3 md:px-[14px] py-1 sm:py-[6px] bg-[#37322F] shadow-[0px_1px_2px_rgba(55,50,47,0.12)] overflow-hidden rounded-full flex justify-center items-center"
+            {/* Headline */}
+            <h1 className="mt-4 text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#37322F] leading-tight">
+              Full-Spectrum IT Solutions
+            </h1>
+
+            {/* Description */}
+            <p className="mt-4 text-[#37322F]/80 text-lg sm:text-xl leading-8 max-w-lg">
+              From mobile apps to AI automation and cloud transformation, we
+              provide end-to-end solutions that empower modern enterprises.
+            </p>
+
+            {/* CTA Buttons */}
+            <div className="mt-6 flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-[#37322F] to-[#2A2520] text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform hover:shadow-2xl"
+              >
+                Book a Consultation
+              </Link>
+              <Link
+                href="/services"
+                className="px-8 py-4 border border-[#37322F] text-[#37322F] font-semibold rounded-full shadow-sm hover:bg-[#F0F0F0] transition-colors"
+              >
+                Explore Services
+              </Link>
+            </div>
+
+            {/* Service Badges (interactive) */}
+            <div className="mt-12 flex flex-wrap gap-4">
+              {services.slice(0, 6).map((service, idx) => (
+                <div
+                  key={service.id}
+                  className="flex items-center gap-2 px-4 py-2 bg-white rounded-full shadow hover:shadow-lg transition-transform hover:-translate-y-1 cursor-pointer"
                 >
-                  <div className="flex flex-col justify-center text-white text-xs md:text-[13px] font-medium leading-5 font-sans">
-                    Get Started
-                  </div>
-                </Link>
-              </div>
+                  <Circle className="w-3 h-3 stroke-[#37322F]" />
+                  <span className="text-sm font-medium text-[#37322F]">
+                    {service.badge}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* Hero Section */}
-          <div className="w-full pt-12 sm:pt-16 md:pt-20 pb-12 sm:pb-16 flex flex-col items-center px-4 sm:px-6 md:px-8 lg:px-12 border-b border-[rgba(55,50,47,0.12)]">
-            <Badge
-              icon={
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7 1V13M1 7H13"
-                    stroke="#37322F"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              }
-              text="Our Services"
+          {/* Right Side - Full Height Image with Floating Icons */}
+          <div className="flex-1 relative h-[500px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl border border-gray-200">
+            <img
+              src="/images/it.jpg" // replace with premium image
+              alt="IT Solutions Illustration"
+              className="w-full h-full object-cover"
             />
-            <h1 className="mt-6 max-w-[700px] text-center text-[#37322F] text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal leading-tight font-serif">
-              Full-spectrum IT solutions for modern enterprises
-            </h1>
-            <p className="mt-6 max-w-[560px] text-center text-[rgba(55,50,47,0.80)] text-base sm:text-lg font-medium leading-7 font-sans">
-              From data infrastructure to AI automation, we deliver end-to-end
-              technology solutions that drive growth and operational excellence.
-            </p>
-          </div>
 
-          {/* Services List */}
-          {services.map((service, index) => (
+            {/* Floating icons over image */}
+            <div className="absolute top-10 left-10 w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+              <Plus className="w-5 h-5 stroke-yellow-500" />
+            </div>
+            <div className="absolute bottom-20 right-16 w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center hover:scale-110 transition-transform">
+              <Hexagon className="w-6 h-6 stroke-orange-500" />
+            </div>
+          </div>
+        </div>
+
+        {/* Blob animation CSS */}
+        <style jsx>{`
+          @keyframes blob {
+            0%,
+            100% {
+              transform: translate(0px, 0px) scale(1);
+            }
+            33% {
+              transform: translate(30px, -50px) scale(1.1);
+            }
+            66% {
+              transform: translate(-20px, 20px) scale(0.9);
+            }
+          }
+          .animate-blob {
+            animation: blob 10s infinite;
+          }
+          .animation-delay-2000 {
+            animation-delay: 2s;
+          }
+        `}</style>
+      </section>
+
+      {/* Services Section */}
+      <section className="w-full flex justify-center mt-16 px-4 sm:px-6 md:px-8">
+        <div className="w-full max-w-7xl flex flex-col gap-16">
+          {services.map((service, i) => (
             <Link
               key={service.id}
               href={`/services/${service.id}`}
-              className={`w-full py-16 sm:py-20 md:py-24 border-b border-[rgba(55,50,47,0.12)] flex flex-col lg:flex-row items-center gap-8 lg:gap-12 cursor-pointer transition-all hover:scale-[1.01] hover:bg-[rgba(55,50,47,0.03)] ${
-                index % 2 === 1
-                  ? "lg:flex-row-reverse bg-[rgba(55,50,47,0.02)]"
-                  : ""
-              }`}
+              className="relative group w-full flex flex-col lg:flex-row items-start gap-8 p-8 rounded-3xl bg-white border border-gray-200 shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 overflow-hidden"
             >
-              {/* Content */}
-              <div className="flex-1 flex flex-col gap-6">
+              {/* Text Content */}
+              <div className="flex-1 flex flex-col gap-4">
                 <Badge
-                  icon={
-                    <svg
-                      width="12"
-                      height="12"
-                      viewBox="0 0 12 12"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <circle
-                        cx="6"
-                        cy="6"
-                        r="5"
-                        stroke="#37322F"
-                        strokeWidth="1.5"
-                      />
-                    </svg>
-                  }
+                  icon={<Circle className="w-3 h-3 stroke-[#37322F]" />}
                   text={service.badge}
                 />
-                <h2 className="text-[#37322F] text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight font-sans tracking-tight">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#37322F] group-hover:text-[#2A2520] transition-colors">
                   {service.title}
                 </h2>
-                <p className="text-[rgba(55,50,47,0.80)] text-base leading-7 font-sans">
+                <p className="text-[#37322F]/80 text-base leading-7">
                   {service.description}
                 </p>
+
+                {/* Features */}
+                <ul className="mt-4 flex flex-wrap gap-2">
+                  {service.features.map((feat, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-center gap-2 px-3 py-1 bg-gradient-to-r from-[#FFD700]/20 to-[#FF8C00]/20 rounded-full text-sm font-medium hover:from-[#FFD700]/40 hover:to-[#FF8C00]/40 transition-all"
+                    >
+                      <Check className="w-4 h-4 stroke-green-500" /> {feat}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Stats */}
+                <div className="mt-4 flex flex-wrap gap-3">
+                  {service.stats.map((stat, idx) => (
+                    <div
+                      key={idx}
+                      className="px-4 py-2 bg-gradient-to-r from-[#FFD700]/20 to-[#FF8C00]/20 rounded-full flex flex-col items-center text-sm font-semibold hover:from-[#FFD700]/40 hover:to-[#FF8C00]/40 transition-all"
+                    >
+                      <span className="text-lg text-[#37322F] font-bold">
+                        {stat.value}
+                      </span>
+                      <span className="text-xs text-[#37322F]/70">
+                        {stat.label}
+                      </span>
+                    </div>
+                  ))}
+                </div>
               </div>
 
-              {/* Image */}
-              <div className="flex-1 w-full">
-                <div className="aspect-[4/3] rounded-lg overflow-hidden bg-white shadow-[0px_0px_0px_1px_rgba(0,0,0,0.08)] shadow-lg">
+              {/* Image always full height on the right */}
+              <div className="flex-1 lg:w-1/2 h-full relative">
+                <div className="h-full rounded-3xl overflow-hidden shadow-xl border border-gray-200 group-hover:scale-105 transform transition-all relative">
                   <img
-                    src={service.image || "/placeholder.svg"}
+                    src={service.image}
                     alt={service.title}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform"
                   />
                 </div>
               </div>
+
+              {/* Bottom Black-Gray Border */}
+              <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-gray-800 to-gray-500 rounded-b-3xl"></div>
             </Link>
           ))}
-
-          {/* Process Section */}
-          <div className="w-full py-16 sm:py-20 md:py-24 border-b border-[rgba(55,50,47,0.12)]">
-            <div className="px-4 sm:px-6 md:px-8 lg:px-12">
-              <div className="text-center mb-12">
-                <Badge
-                  icon={
-                    <svg
-                      width="14"
-                      height="14"
-                      viewBox="0 0 14 14"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M7 1L12 4V10L7 13L2 10V4L7 1Z"
-                        stroke="#37322F"
-                        strokeWidth="1.5"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  }
-                  text="Our Process"
-                />
-                <h2 className="mt-6 text-[#37322F] text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight font-sans tracking-tight">
-                  How we deliver excellence
-                </h2>
-                <p className="mt-4 max-w-[500px] mx-auto text-[rgba(55,50,47,0.80)] text-base leading-7 font-sans">
-                  Our proven methodology ensures successful project delivery
-                  every time.
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {[
-                  {
-                    step: "01",
-                    title: "Discovery",
-                    description:
-                      "Deep dive into your business needs, challenges, and goals.",
-                  },
-                  {
-                    step: "02",
-                    title: "Strategy",
-                    description:
-                      "Craft a tailored solution architecture and roadmap.",
-                  },
-                  {
-                    step: "03",
-                    title: "Development",
-                    description:
-                      "Agile implementation with continuous feedback loops.",
-                  },
-                  {
-                    step: "04",
-                    title: "Deployment",
-                    description:
-                      "Smooth launch with training and ongoing support.",
-                  },
-                ].map((phase, i) => (
-                  <div
-                    key={i}
-                    className="p-6 bg-white rounded-lg border border-[rgba(55,50,47,0.08)] hover:border-[rgba(55,50,47,0.20)] transition-colors"
-                  >
-                    <div className="text-[rgba(55,50,47,0.30)] text-4xl font-semibold font-sans mb-4">
-                      {phase.step}
-                    </div>
-                    <h3 className="text-[#37322F] text-lg font-semibold font-sans mb-2">
-                      {phase.title}
-                    </h3>
-                    <p className="text-[rgba(55,50,47,0.70)] text-sm leading-6 font-sans">
-                      {phase.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* CTA Section */}
-          <div className="w-full py-16 sm:py-20 border-b border-[rgba(55,50,47,0.12)]">
-            <div className="px-4 sm:px-6 md:px-8 lg:px-12 text-center">
-              <h2 className="text-[#37322F] text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight font-sans tracking-tight">
-                Ready to get started?
-              </h2>
-              <p className="mt-4 max-w-[500px] mx-auto text-[rgba(55,50,47,0.80)] text-base leading-7 font-sans">
-                Let's discuss how our services can help transform your business.
-              </p>
-              <Link
-                href="/contact"
-                className="mt-8 inline-flex h-12 px-8 bg-[#37322F] shadow-[0px_0px_0px_2.5px_rgba(255,255,255,0.08)_inset] rounded-full items-center justify-center hover:bg-[#2A2520] transition-colors"
-              >
-                <span className="text-white text-[15px] font-medium font-sans">
-                  Book a consultation
-                </span>
-              </Link>
-            </div>
-          </div>
-
-          <FooterSection />
         </div>
-      </div>
+      </section>
+      <TechStack />
+      
+      {/* Timeline Section */}
+      <Timeline />
+
+      {/* CTA Section */}
+      <section className="w-full py-32 px-4 sm:px-6 md:px-8 text-center relative">
+        <div className="bg-white rounded-3xl shadow-xl p-16 flex flex-col items-center">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-[#37322F]">
+            Ready to transform your business?
+          </h2>
+          <p className="mt-6 text-[#37322F]/80 max-w-xl text-lg leading-8">
+            Let’s discuss how our services can accelerate your growth.
+          </p>
+          <Link
+            href="/contact"
+            className="mt-12 inline-block px-10 py-4 bg-[#37322F] text-white font-semibold rounded-full shadow-lg hover:scale-105 transition-transform"
+          >
+            Book a Consultation
+          </Link>
+        </div>
+      </section>
+
+      <FooterSection />
     </div>
   );
 }

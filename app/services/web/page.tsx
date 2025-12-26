@@ -7,16 +7,18 @@ import ClientsSection from "./client-section";
 import WebDevHero from "./hero";
 import ServiceBenefits from "./service-benefits";
 import WhyChooseWebSection from "./why-web-dev";
+import Navbar from "@/components/nav-bar";
 export default function Page() {
   return (
     <>
+      <Navbar />
       <WebDevHero />
-      <ServiceBenefits/>
+      <ServiceBenefits />
       <ThreeColumnSection />
       <ProcessTabs />
       <IndustriesSlider />
       <ClientsSection />
-      <WhyChooseWebSection/>
+      <WhyChooseWebSection />
       <section className="ezy__cta6 light py-14 md:py-24 text-white">
         <div className="container px-4 mx-auto">
           <div className="bg-[#303446] rounded-3xl overflow-hidden max-w-8xl mx-auto">

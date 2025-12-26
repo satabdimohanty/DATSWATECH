@@ -1,12 +1,28 @@
 import FooterSection from "@/components/footer-section";
 import AnimatedServicesTabs from "./service-tabs";
 import ITServicesTabs from "./it-services";
+import GenerativeAISection from "./ai-sol";
+import AIPlatformSection from "./ai-platform";
+import AIWhyChooseUs from "./ai";
+import AIServiceBenefits from "./ai-ser.ben";
+import AiHero from "./hero";
+import SoftwareServices from "./software-dev";
+import Navbar from "@/components/nav-bar";
+import StickySteps from "./sticky-steps ";
 
 export default function Page() {
   return (
     <>
-    <AnimatedServicesTabs/>
-    <ITServicesTabs/>
+      <Navbar />
+      <AiHero />
+      <StickySteps />
+      <AnimatedServicesTabs />
+      <ITServicesTabs />
+      <GenerativeAISection />
+      <AIServiceBenefits />
+      <AIWhyChooseUs />
+      <SoftwareServices />
+      <AIPlatformSection />
       <section className="ezy__cta6 light py-14 md:py-24 text-white">
         <div className="container px-4 mx-auto">
           <div className="bg-[#303446] rounded-3xl overflow-hidden max-w-8xl mx-auto">

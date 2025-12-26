@@ -60,7 +60,9 @@ export default function HorizontalScrollAISolutions() {
       if (!horizontalRef.current || !containerRef.current) return;
       const scrollWidth = horizontalRef.current.scrollWidth;
       const viewportWidth = window.innerWidth;
-      setContainerHeight(scrollWidth - viewportWidth + window.innerHeight + 250); // extra space
+      setContainerHeight(
+        scrollWidth - viewportWidth + window.innerHeight + 250
+      ); // extra space
     };
 
     handleResize();
@@ -85,14 +87,19 @@ export default function HorizontalScrollAISolutions() {
   }, [containerHeight]);
 
   return (
-    <section ref={containerRef} style={{ height: `${containerHeight}px` }} className="relative bg-gray-50">
+    <section
+      ref={containerRef}
+      style={{ height: `${containerHeight}px` }}
+      className="relative bg-gray-50"
+    >
       {/* Top Header */}
       <div className="container mx-auto px-6 py-20 text-center">
         <h2 className="text-4xl lg:text-5xl font-extrabold text-gray-800 mb-4">
           Our AI Solutions
         </h2>
         <p className="text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto">
-          Explore our intelligent AI services designed to transform your business operations and customer experiences.
+          Explore our intelligent AI services designed to transform your
+          business operations and customer experiences.
         </p>
       </div>
 
@@ -102,46 +109,44 @@ export default function HorizontalScrollAISolutions() {
           {aiSolutions.map((solution, index) => (
             <div
               key={index}
-              className="flex-shrink-0 w-[500px] relative flex flex-col justify-between bg-white rounded-2xl p-6 shadow-xl overflow-hidden"
+              className="flex-shrink-0 w-[500px] relative flex flex-col bg-white rounded-2xl shadow-xl overflow-hidden"
             >
-              {/* Large background text */}
-              <span className="absolute text-gray-200 text-[5rem] font-extrabold -top-8 -left-4 select-none pointer-events-none">
-                {solution.title.toUpperCase()}
-              </span>
-
-              {/* Badge */}
-              {solution.badge && (
-                <span className="inline-block bg-blue-600 text-white text-xs font-semibold px-3 py-1 rounded-full mb-3 z-10 relative">
-                  {solution.badge}
-                </span>
-              )}
-
-              {/* Image */}
-              <div className="relative w-full h-64 mb-4 rounded-lg overflow-hidden z-10">
-                <Image
-                  src={solution.image}
-                  alt={solution.title}
-                  fill
-                  className="object-cover"
-                />
-              </div>
-
-              {/* Header + Subheader */}
-              <div className="z-10 relative">
-                <h3 className="text-2xl font-bold mb-1">{solution.title}</h3>
-                <h4 className="text-sm text-gray-500 mb-3">{solution.subtitle}</h4>
-              </div>
-
-              {/* Description */}
-              <p className="text-gray-600 mb-4 z-10 relative">{solution.description}</p>
-
-              {/* Link */}
-              <a
-                href={solution.link}
-                className="text-blue-600 font-semibold hover:underline z-10 relative"
+              {/* Full top image with gray gradient border */}
+              <div
+                className="relative w-full h-64 sm:h-80 lg:h-96 rounded-t-2xl overflow-hidden
+                      bg-gradient-to-br from-gray-200 via-gray-300 to-gray-400 p-1"
               >
-                Read more
-              </a>
+                <div className="w-full h-full rounded-t-2xl overflow-hidden">
+                  <Image
+                    src={solution.image}
+                    alt={solution.title}
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </div>
+
+              {/* Text Content */}
+              <div className="p-6 flex flex-col justify-between">
+                {/* Header + Subheader */}
+                <div>
+                  <h3 className="text-2xl font-bold mb-1">{solution.title}</h3>
+                  <h4 className="text-sm text-gray-500 mb-3">
+                    {solution.subtitle}
+                  </h4>
+                </div>
+
+                {/* Description */}
+                <p className="text-gray-600 mb-4">{solution.description}</p>
+
+                {/* Link */}
+                <a
+                  href={solution.link}
+                  className="text-blue-600 font-semibold hover:underline"
+                >
+                  Read more
+                </a>
+              </div>
             </div>
           ))}
         </div>

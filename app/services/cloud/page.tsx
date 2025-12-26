@@ -5,10 +5,12 @@ import SolutionsSection from "./solution";
 import WhoIsItFor from "./who";
 import CloudPlatformSection from "./cloud";
 import SolutionsSections from "./solution1";
+import Navbar from "@/components/nav-bar";
 
 export default function Page() {
   return (
     <>
+      <Navbar />
       <CloudHero />
       <SolutionsSection />
       <NeysaVelocisSection />

@@ -6,10 +6,12 @@ import AdvancedFeatures from "./advanced-feature";
 import MobileTechSection from "./tech-section";
 import ServicesSection from "./service-section";
 import MobileAppOutcome from "./mobile-app-outcome";
+import Navbar from "@/components/nav-bar";
 
 export default function Page() {
   return (
     <>
+      <Navbar />
       <section className="py-28 px-6 lg:px-20 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-700 relative overflow-hidden">
         <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center lg:justify-between gap-16">
           {/* Left Content */}

@@ -7,10 +7,12 @@ import AIRevenueWorkforce from "./ai-revenue";
 import WhyChooseUs from "./why-choose-us";
 import ProductAccordion from "./product";
 import HowWeHelpClients from "./how-we-help";
+import Navbar from "@/components/nav-bar";
 
 export default function DataPage() {
   return (
     <div className="w-full min-h-screen flex flex-col">
+      <Navbar />
       {/* Hero Section */}
       <Hero />
       <HowWeHelpClients />

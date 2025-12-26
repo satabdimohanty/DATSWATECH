@@ -7,16 +7,18 @@ import DataAnalyticsServices from "./industries";
 import Roadmap from "./roadmap";
 import HowItWorks2 from "./how-it-works";
 import DataCommitment from "./data-commit";
+import Navbar from "@/components/nav-bar";
 
 export default function DataPage() {
   return (
     <div className="w-full min-h-screen bg-[#F7F5F3] flex flex-col">
+      <Navbar />
       {/* Hero Section */}
       <Hero />
       {/* Data Services Section */}
       <DataServices />
       {/* Data Analytics Services for Industries Section */}
-      <DataCommitment/>
+      <DataCommitment />
       <DataAnalyticsServices />
       {/* Roadmap Section */}
       <Roadmap />

@@ -6,11 +6,13 @@ import ErpAccordionWithImage from "./erp-accodian";
 import ErpSuccessStories from "./erp-success";
 import SolutionsGrid from "./soulution-grid";
 import ERPCards from "./erp-cards";
+import Navbar from "@/components/nav-bar";
 
 export default function DataPage() {
   return (
     <div className="w-full min-h-screen bg-[#F7F5F3] flex flex-col">
       {/* Hero Section */}
+      <Navbar />
       <Hero />
       <ErpAccordionWithImage />
       <ErpSuccessStories />
