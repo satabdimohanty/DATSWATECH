@@ -26,26 +26,30 @@ const MilestonesSection: React.FC = () => {
     {
       year: "2020",
       title: "Company Founded",
-      description: "DATSWATECH started with a vision to democratize tech solutions.",
-      points: ["Core team established", "Initial funding secured"]
+      description:
+        "DATSWATECH started with a vision to democratize tech solutions.",
+      points: ["Core team established", "Initial funding secured"],
     },
     {
       year: "2021",
       title: "First Product Launch",
       description: "Launched our first enterprise solution.",
-      points: ["Beta testing with 5 clients", "Positive market feedback"]
+      points: ["Beta testing with 5 clients", "Positive market feedback"],
     },
     {
       year: "2022",
       title: "Global Expansion",
       description: "Entered 3 new international markets.",
-      points: ["Offices in USA, UK, and Canada", "Partnerships with key enterprises"]
+      points: [
+        "Offices in USA, UK, and Canada",
+        "Partnerships with key enterprises",
+      ],
     },
     {
       year: "2023",
       title: "Industry Recognition",
       description: "Awarded multiple accolades for innovation and excellence.",
-      points: ["Top 50 startups recognition", "AI innovation award"]
+      points: ["Top 50 startups recognition", "AI innovation award"],
     },
   ];
 
@@ -74,8 +78,11 @@ const MilestonesSection: React.FC = () => {
             text="Our Journey"
           />
           <h2 className="mt-6 text-[#37322F] text-3xl sm:text-4xl md:text-5xl font-semibold leading-tight font-sans tracking-tight">
-            Key Milestones
+            Milestones that shaped our technology journey.
           </h2>
+          <p className="mt-2 text-base sm:text-lg text-black max-w-2xl mx-auto">
+            A timeline of innovation, growth, and impactful digital solutions.
+          </p>
         </div>
 
         {/* Timeline */}

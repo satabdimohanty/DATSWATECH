@@ -74,16 +74,16 @@ export default function AIWhyChooseUs() {
           </div>
 
           {/* RIGHT ACCORDION */}
-          <div className="bg-gradient-to-b from-gray-300 via-gray-400 to-gray-500 p-10 lg:p-16">
+          <div className="bg-gradient-to-b from-gray-800 via-gray-400 to-gray-800 p-10 lg:p-16">
             {items.map((item) => (
               <div
                 key={item.id}
-                className="mb-4 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-white"
+                className="mb-4 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 bg-black"
               >
                 {/* QUESTION BUTTON */}
                 <button
                   onClick={() => toggleItem(item.id)}
-                  className="w-full flex items-center justify-between py-6 px-6 bg-gray-100 hover:bg-gray-200 text-gray-900 font-semibold text-lg gap-4 rounded-xl transition-all duration-500"
+                  className="w-full flex items-center justify-between py-6 px-6 bg-gray-400 hover:bg-gray-200 text-gray-900 font-semibold text-lg gap-4 rounded-xl transition-all duration-500"
                 >
                   <div className="flex items-center gap-4">
                     <span className="bg-blue-600 p-3 rounded-full flex items-center justify-center">
@@ -104,7 +104,7 @@ export default function AIWhyChooseUs() {
 
                 {/* ANSWER CONTENT */}
                 <div
-                  className={`px-8 py-6 bg-gray-50 text-gray-700 text-sm leading-relaxed transition-all duration-500 overflow-hidden ${
+                  className={`px-8 py-6  text-gray-100 text-m leading-relaxed transition-all duration-500 overflow-hidden ${
                     activeId === item.id
                       ? "max-h-96 opacity-100"
                       : "max-h-0 opacity-0"

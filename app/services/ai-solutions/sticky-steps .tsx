@@ -106,13 +106,13 @@ export default function StackCardsHero() {
           <div className="absolute bottom-0 flex justify-center gap-4 w-full mt-8">
             <button
               onClick={prev}
-              className="p-4 bg-gray-300 rounded-full hover:bg-gray-400 transition text-2xl"
+              className="p-4 rounded-full  transition text-7xl"
             >
               &#8592;
             </button>
             <button
               onClick={next}
-              className="p-4 bg-gray-300 rounded-full hover:bg-gray-400 transition text-2xl"
+              className="p-4 rounded-full transition text-7xl"
             >
               &#8594;
             </button>

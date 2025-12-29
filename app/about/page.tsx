@@ -8,7 +8,8 @@ import FooterSection from "@/components/footer-section";
 import MeasurableImpact from "./measurable-impact";
 import ConsultingApproach from "./appraoch";
 import MilestonesSection from "./milestone";
-
+import OriginalSVGStepper from "./process-steps";
+import PartnershipModels from "./partner";
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
@@ -150,7 +151,7 @@ export default function AboutPage() {
   return (
     <div className="w-full min-h-screen relative bg-[#F7F5F3] overflow-x-hidden flex flex-col justify-start items-center">
       <div className="relative flex flex-col justify-start items-center w-full">
-        <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1060px] lg:w-[1060px] relative flex flex-col justify-start items-start">
+        <div className="w-full max-w-none px-4 sm:px-6 md:px-8 lg:px-0 lg:max-w-[1460px] lg:w-[1460px] relative flex flex-col justify-start items-start">
           {/* Vertical lines */}
           <div className="w-[1px] h-full absolute left-4 sm:left-6 md:left-8 lg:left-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
           <div className="w-[1px] h-full absolute right-4 sm:right-6 md:right-8 lg:right-0 top-0 bg-[rgba(55,50,47,0.12)] shadow-[1px_0px_0px_white] z-0"></div>
@@ -190,6 +191,7 @@ export default function AboutPage() {
           <AboutTimeline />
           <MeasurableImpact />
           <ConsultingApproach />
+          <PartnershipModels />
           {/* Story Section */}
           <div className="w-full py-20 sm:py-24 md:py-28 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-900 relative overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-12">
@@ -246,6 +248,7 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+          <OriginalSVGStepper />
           {/* Leaders / Clients Section */}
           <section className="w-full py-16 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300">
             <div className="max-w-[1200px] mx-auto px-6 lg:px-12">
@@ -318,7 +321,7 @@ export default function AboutPage() {
                 <h2 className="mt-6 text-[#37322F] text-3xl sm:text-4xl md:text-5xl font-bold leading-tight font-sans tracking-tight">
                   What drives us
                 </h2>
-                <p className="mt-4 text-gray-700 max-w-2xl mx-auto text-base sm:text-lg">
+                <p className="mt-4 text-gray-700 max-w-4xl mx-auto text-base sm:text-lg">
                   At DATSWATECH, our values shape how we work, innovate, and
                   deliver results for our clients.
                 </p>
@@ -354,10 +357,10 @@ export default function AboutPage() {
             <div className="px-4 sm:px-6 md:px-8 lg:px-12">
               {/* Section Header */}
               <div className="text-center mb-12">
-                <h2 className="text-blue-900 text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
+                <h2 className="text-black text-3xl sm:text-4xl md:text-5xl font-bold leading-tight">
                   Meet the Leadership
                 </h2>
-                <p className="mt-4 max-w-[600px] mx-auto text-blue-800 text-base leading-7">
+                <p className="mt-4 max-w-[600px] mx-auto text-black text-base leading-7">
                   Experienced professionals passionate about technology and
                   client success.
                 </p>

@@ -7,6 +7,8 @@ import Navbar from "@/components/nav-bar";
 import FooterSection from "@/components/footer-section";
 import Timeline from "./timeline";
 import TechStack from "./techla";
+
+import ProcessSteps from "./process-steps";
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="px-3 py-1 bg-white rounded-full flex items-center gap-2 border border-[#E0E0E0] shadow-sm">
@@ -352,7 +354,9 @@ export default function ServicesPage() {
         </div>
       </section>
       <TechStack />
-      
+
+      <ProcessSteps />
+
       {/* Timeline Section */}
       <Timeline />
 
