@@ -34,7 +34,7 @@ export default function ConsultingApproach() {
 
   return (
     <section className="bg-blue-900 py-24 text-white">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+      <div className="max-w-8xl mx-auto px-6 grid md:grid-cols-2 gap-12">
         {/* Left Content */}
         <div className="flex flex-col justify-between">
           <div>
