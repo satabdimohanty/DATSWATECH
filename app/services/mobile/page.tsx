@@ -273,7 +273,7 @@ export default function Page() {
               <div className="col-span-1 lg:col-span-5 mt-8 lg:mt-0 text-center lg:text-end">
                 <div className="flex justify-center lg:justify-end">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/cta/cta_6.png" // Replace with mobile app illustration
+                    src="/images/cts.jpg" // Replace with mobile app illustration
                     alt="Mobile App Development"
                     className="rounded-tl-[50%] rounded-tr-[30%] w-full max-w-sm lg:rounded-tr-none lg:rounded-bl-[40%] lg:w-auto"
                   />

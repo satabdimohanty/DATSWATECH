@@ -27,7 +27,7 @@ export default function DataPage() {
               {/* Image */}
               <div className="col-span-12 lg:col-span-6 bg-black bg-opacity-5 text-center p-4 flex items-center justify-center">
                 <img
-                  src="https://cdn.easyfrontend.com/pictures/cta/cta_8.png"
+                  src="/images/cts.jpg"
                   alt="Consultancy Illustration"
                   className="max-w-full h-auto"
                 />

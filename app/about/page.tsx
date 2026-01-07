@@ -10,6 +10,8 @@ import ConsultingApproach from "./appraoch";
 import MilestonesSection from "./milestone";
 import OriginalSVGStepper from "./process-steps";
 import PartnershipModels from "./partner";
+import { EyeIcon, RocketLaunchIcon } from "@heroicons/react/24/outline";
+
 function Badge({ icon, text }: { icon: React.ReactNode; text: string }) {
   return (
     <div className="px-[14px] py-[6px] bg-white shadow-[0px_0px_0px_4px_rgba(55,50,47,0.05)] overflow-hidden rounded-[90px] flex justify-start items-center gap-[8px] border border-[rgba(2,6,23,0.08)] shadow-xs">
@@ -249,6 +251,224 @@ export default function AboutPage() {
             </div>
           </div>
           <OriginalSVGStepper />
+          <section className="bg-[#010743]">
+            <div className="w-[86%] max-w-8xl mx-auto py-16">
+              {/* Heading */}
+              <div className="text-center">
+                <h2 className="capitalize text-3xl lg:text-[42px] leading-snug font-normal text-white/80">
+                  Why choose DATSWATECH as your trusted digital & data solutions
+                  partner?
+                </h2>
+              </div>
+
+              {/* Cards */}
+              <div className="flex gap-4 w-full min-h-[220px] md:min-h-[420px] mt-12">
+                {/* Card 01 – Always Visible */}
+                <div
+                  className="group relative flex-[2.5] hover:flex-[4]
+                   bg-[#0133D2] cursor-pointer
+                   border border-white/10 hover:border-white/40
+                   hover:ring-1 hover:ring-white/20
+                   transition-all duration-700 overflow-hidden"
+                >
+                  <h3 className="px-6 pt-6 text-white/15 text-[80px] font-light">
+                    01
+                  </h3>
+
+                  <div className="absolute inset-0 flex flex-col justify-end p-6 text-white">
+                    <h2 className="text-xl md:text-3xl text-white/90">
+                      100+ Data & Digital Projects Delivered
+                    </h2>
+                    <p className="text-sm md:text-lg mt-4 text-white/70">
+                      DATSWATECH has successfully delivered over 100 projects
+                      across data analytics, business intelligence, automation,
+                      and digital transformation for clients across industries.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 02 */}
+                <div
+                  className="group relative flex-1 hover:flex-[3]
+                   bg-[#0C1F59] cursor-pointer
+                   border border-white/10 hover:border-white/40
+                   hover:ring-1 hover:ring-white/20
+                   transition-all duration-700 overflow-hidden"
+                >
+                  <h3 className="px-6 pt-6 text-white/15 text-[80px] font-light">
+                    02
+                  </h3>
+
+                  <div
+                    className="absolute inset-0 flex flex-col justify-end p-6
+                     opacity-0 translate-y-6
+                     group-hover:opacity-100 group-hover:translate-y-0
+                     transition-all duration-700 text-white"
+                  >
+                    <h2 className="text-xl md:text-3xl text-white/90">
+                      Expertise Across Data, BI & Cloud Platforms
+                    </h2>
+                    <p className="text-sm md:text-lg mt-4 text-white/70">
+                      Our experts work with Power BI, Azure, SQL, and modern
+                      cloud data platforms to transform complex datasets into
+                      clear, actionable insights.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 03 */}
+                <div
+                  className="group relative flex-1 hover:flex-[3]
+                   bg-[#0C1F59] cursor-pointer
+                   border border-white/10 hover:border-white/40
+                   hover:ring-1 hover:ring-white/20
+                   transition-all duration-700 overflow-hidden"
+                >
+                  <h3 className="px-6 pt-6 text-white/15 text-[80px] font-light">
+                    03
+                  </h3>
+
+                  <div
+                    className="absolute inset-0 flex flex-col justify-end p-6
+                     opacity-0 translate-y-6
+                     group-hover:opacity-100 group-hover:translate-y-0
+                     transition-all duration-700 text-white"
+                  >
+                    <h2 className="text-xl md:text-3xl text-white/90">
+                      End-to-End Analytics & Consulting Services
+                    </h2>
+                    <p className="text-sm md:text-lg mt-4 text-white/70">
+                      From strategy and architecture to implementation and
+                      optimization, DATSWATECH supports organizations throughout
+                      their complete analytics journey.
+                    </p>
+                  </div>
+                </div>
+
+                {/* Card 04 */}
+                <div
+                  className="group relative flex-1 hover:flex-[3]
+                   bg-[#0C1F59] cursor-pointer
+                   border border-white/10 hover:border-white/40
+                   hover:ring-1 hover:ring-white/20
+                   transition-all duration-700 overflow-hidden"
+                >
+                  <h3 className="px-6 pt-6 text-white/15 text-[80px] font-light">
+                    04
+                  </h3>
+
+                  <div
+                    className="absolute inset-0 flex flex-col justify-end p-6
+                     opacity-0 translate-y-6
+                     group-hover:opacity-100 group-hover:translate-y-0
+                     transition-all duration-700 text-white"
+                  >
+                    <h2 className="text-xl md:text-3xl text-white/90">
+                      Scalable, Secure & Business-Ready Solutions
+                    </h2>
+                    <p className="text-sm md:text-lg mt-4 text-white/70">
+                      We deliver scalable, secure, and enterprise-ready
+                      solutions aligned with business goals, ensuring data
+                      governance, reliability, and sustainable growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="mt-20 bg-gradient-to-b from-[#0A0A0A] via-[#121212] to-[#1A1A1A] py-20 px-6 lg:px-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 max-w-8xl mx-auto">
+              {/* Vision */}
+              <div
+                className="group relative rounded-2xl p-10
+                 bg-gradient-to-br from-white/10 via-white/5 to-transparent
+                 border border-white/10
+                 backdrop-blur-xl
+                 shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+                 hover:border-white/30
+                 hover:-translate-y-2
+                 transition-all duration-500"
+              >
+                {/* Glow */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500
+                      bg-gradient-to-br from-white/10 via-transparent to-transparent blur-xl"
+                ></div>
+
+                <div className="relative">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className="p-4 rounded-xl
+                       bg-gradient-to-br from-white/20 to-white/5
+                       ring-1 ring-white/20
+                       text-white
+                       group-hover:ring-white/40
+                       transition-all"
+                    >
+                      <EyeIcon className="h-7 w-7" />
+                    </div>
+
+                    <h2 className="text-white text-2xl font-semibold tracking-wide">
+                      Our Vision
+                    </h2>
+                  </div>
+
+                  <p className="text-white/80 leading-7 text-base">
+                    To become a trusted global technology partner that empowers
+                    organizations through data-driven insights, cloud
+                    innovation, and intelligent digital solutions—enabling
+                    smarter decisions and sustainable business growth.
+                  </p>
+                </div>
+              </div>
+
+              {/* Mission */}
+              <div
+                className="group relative rounded-2xl p-10
+                 bg-gradient-to-br from-white/10 via-white/5 to-transparent
+                 border border-white/10
+                 backdrop-blur-xl
+                 shadow-[0_20px_60px_rgba(0,0,0,0.6)]
+                 hover:border-white/30
+                 hover:-translate-y-2
+                 transition-all duration-500"
+              >
+                {/* Glow */}
+                <div
+                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition duration-500
+                      bg-gradient-to-br from-white/10 via-transparent to-transparent blur-xl"
+                ></div>
+
+                <div className="relative">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div
+                      className="p-4 rounded-xl
+                       bg-gradient-to-br from-white/20 to-white/5
+                       ring-1 ring-white/20
+                       text-white
+                       group-hover:ring-white/40
+                       transition-all"
+                    >
+                      <RocketLaunchIcon className="h-7 w-7" />
+                    </div>
+
+                    <h2 className="text-white text-2xl font-semibold tracking-wide">
+                      Our Mission
+                    </h2>
+                  </div>
+
+                  <p className="text-white/80 leading-7 text-base">
+                    Our mission is to design and deliver secure, scalable, and
+                    innovative digital solutions across data analytics, cloud
+                    platforms, automation, and engineering—helping businesses
+                    optimize operations, enhance decision-making, and achieve
+                    long-term success.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
           {/* Leaders / Clients Section */}
           <section className="w-full py-16 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300">
             <div className="max-w-[1200px] mx-auto px-6 lg:px-12">

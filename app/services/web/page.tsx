@@ -51,7 +51,7 @@ export default function Page() {
               <div className="col-span-12 lg:col-span-5 text-end">
                 <div className="flex justify-end">
                   <img
-                    src="https://cdn.easyfrontend.com/pictures/cta/cta_6.png" // replace with web development image
+                    src="/images/cts.jpg" // replace with web development image
                     alt="Web Development"
                     className="rounded-tl-[50%] rounded-tr-[30%] w-full lg:rounded-tr-none lg:rounded-bl-[40%] lg:w-auto"
                   />
